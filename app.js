@@ -22,10 +22,10 @@ $(document).ready(function(){
       success:  function(youtube_response) {
         console.log(youtube_response);
         //direct path of JSON objects
-        var source = youtube_response.data.items[0].player.default;
+        var source = "http://www.youtube.com/embed/"+ youtube_response.data.items[0].id;
         console.log(source);
         $('.video').attr("src", source);
-        // selcet the iFrame
+        // select the iFrame
         // use .attr (jQuery) to changeg the src to whatever youTube sent  back 
 
       }
